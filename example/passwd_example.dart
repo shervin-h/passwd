@@ -1,7 +1,7 @@
 import 'package:passwd/passwd.dart';
 
 void main() {
-  print(generatePassword()); // abhdhxmo
+  print(generatePassword()); // wAOrDoQM
 
   print(
     generatePassword(
@@ -29,7 +29,7 @@ void main() {
 
   print(
     generatePassword(
-      length: 20,
+      length: 40,
       upperCase: true,
       lowerCase: true,
       digits: true,

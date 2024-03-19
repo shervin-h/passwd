@@ -1,39 +1,82 @@
-<!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+![Screenshots](https://github.com/shervin-h/passwd/blob/main/assets/passwd.jpg)
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages). 
+# Password Generator
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages). 
--->
+By using `passwd` package, you can generate a strong password that includes a wide set of characters,
+such as upper and lowercase characters, numbers, special characters or punctuation.
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+🔑 🗝️ 🔐
 
-## Features
+## Install Package
+add the following line to your `pubspec.yaml` under `dependencies`:
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+```yaml
+dependencies:
+  passwd: ^1.0.0
+```
+
+then run:
+
+```
+dart pub get
+```
+
+or
+
+```
+flutter pub get
+```
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+first import
+```dart
+import 'package:passwd/passwd.dart';
+```
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
+now in your dart code, you can use:
 
 ```dart
-const like = 'sample';
+print(generatePassword()); // TNCrPnot
+
+print(
+  generatePassword(
+    length: 20,
+    upperCase: true,
+  ),
+); // VIMTANUPYBTMPICFESYL
+
+print(
+  generatePassword(
+    length: 20,
+    upperCase: true,
+    lowerCase: true,
+  ),
+); // TdClmuvLBQwcMHkUKxHl
+
+print(
+  generatePassword(
+    length: 20,
+    upperCase: true,
+    lowerCase: true,
+    digits: true,
+  ),
+); // zp3AzPXvw6h35ZaEgPl1
+
+print(
+  generatePassword(
+    length: 40,
+    upperCase: true,
+    lowerCase: true,
+    digits: true,
+    punctuation: true,
+  ),
+); // Y#%_8f^ZJ6>IZGv]SmZBqun3"e6k$5ia>IaeKikx
 ```
 
-## Additional information
+### by Shervin Hassanzadeh
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+- shervin.hz07@gmail.com
+- [linked in](https://www.linkedin.com/in/shervin-hassanzadeh)
